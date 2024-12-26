@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Level Detector</title>
+    <link rel="icon" href="data:,❗">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+            background-size: cover;
+            background-image: url(:/stress_detection/static/stress_jpg.jpg) ;
+        }
+        h1 {
+            color: blue;
+        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 10px auto;
+            background: white; /* Optional: Add a semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            height: 500px;
+        }
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .nav-link {
+            color: white !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">Stress Level Detector</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                
+                <li class="nav-item"><a class="btn btn-primary btn-lg" href="/predict" role="button">Predict</a></li>
+                <li class="nav-item"><a class="btn btn-primary btn-lg" href="/visualize" role="button">Visualize</a></li>
+            </ul>
+        </div>
+    </nav>
+<style>
+    body{
+        background-size: cover;
+            background-image: url(D:/stress_detection/static/stress_image.jpg) ;
+        }
+</style>
+    </body>
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="alert alert-success" role="alert">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chart {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .chart img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stress Detection Visualizations</h1>
+        <div class="chart">
+            <h2>Box Plot of Heart Rate by Stress Level</h2>
+            <img src="data:image/png;base64,{{ visual_data.boxplot_hr_url }}" alt="Box Plot of Heart Rate by Stress Level">
+        </div>
+       
+        <div class="chart">
+            <h2>Pie Chart of Stress Levels</h2>
+            <img src="data:image/png;base64,{{ visual_data.pie_chart_sl_url }}" alt="Pie Chart of Stress Levels">
+        </div>
+    </div>
+</body>
+</html>

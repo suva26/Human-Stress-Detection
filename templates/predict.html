@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Make Prediction</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="sr">SR:</label>
+        <input type="text" class="form-control" id="sr" name="sr" required>
+    </div>
+    <div class="form-group">
+        <label for="rr">RR:</label>
+        <input type="text" class="form-control" id="rr" name="rr" required>
+    </div>
+    <div class="form-group">
+        <label for="t">T:</label>
+        <input type="text" class="form-control" id="t" name="t" required>
+    </div>
+    <div class="form-group">
+        <label for="lm">LM:</label>
+        <input type="text" class="form-control" id="lm" name="lm" required>
+    </div>
+    <div class="form-group">
+        <label for="bo">BO:</label>
+        <input type="text" class="form-control" id="bo" name="bo" required>
+    </div>
+    <div class="form-group">
+        <label for="rem">REM:</label>
+        <input type="text" class="form-control" id="rem" name="rem" required>
+    </div>
+    <div class="form-group">
+        <label for="sh">SH:</label>
+        <input type="text" class="form-control" id="sh" name="sh" required>
+    </div>
+    <div class="form-group">
+        <label for="hr">HR:</label>
+        <input type="text" class="form-control" id="hr" name="hr" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+{% endblock %}
